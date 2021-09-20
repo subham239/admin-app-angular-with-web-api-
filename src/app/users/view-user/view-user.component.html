@@ -1,0 +1,9 @@
+
+<mat-card class="user-details" *ngIf="userDetails">
+    <mat-card-title>    {{userDetails.name}}</mat-card-title>
+    <mat-card-content>{{userDetails.email}}</mat-card-content>
+    <mat-card-actions>
+        <a class="action-link" [routerLink]="['view',userDetails.id]">View</a> | <a class="action-link"
+            [routerLink]="['edit',userDetails.id]">Edit</a>| <a class="action-link" [routerLink]="['delete',userDetails.id]">Delete</a>
+    </mat-card-actions>
+</mat-card>
